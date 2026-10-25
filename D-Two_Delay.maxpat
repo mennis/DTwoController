@@ -1,552 +1,1330 @@
 {
-    "patcher": {
-        "fileversion": 1,
-        "appversion": {
-            "major": 9,
-            "minor": 1,
-            "revision": 0,
-            "architecture": "x64",
-            "modernui": 1
-        },
-        "classnamespace": "box",
-        "rect": [ 224.0, 206.0, 1000.0, 780.0 ],
-        "openinpresentation": 1,
-        "boxes": [
-            {
-                "box": {
-                    "id": "obj-9",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 91.0, 136.0, 150.0, 20.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 20.0, 143.0, 54.00000160932541, 20.0 ],
-                    "text": "Repeats"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-8",
-                    "maxclass": "live.dial",
-                    "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "float" ],
-                    "parameter_enable": 1,
-                    "patching_rect": [ 20.0, 20.0, 40.0, 48.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 20.0, 20.0, 40.0, 48.0 ],
-                    "saved_attribute_attributes": {
-                        "valueof": {
-                            "parameter_longname": "Delay[1]",
-                            "parameter_modmode": 0,
-                            "parameter_shortname": "Delay",
-                            "parameter_type": 1,
-                            "parameter_unitstyle": 0
-                        }
-                    },
-                    "varname": "live.dial[1]"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-5",
-                    "maxclass": "newobj",
-                    "numinlets": 6,
-                    "numoutlets": 1,
-                    "outlettype": [ "" ],
-                    "patching_rect": [ 124.0, 1.0, 117.0, 22.0 ],
-                    "text": "scale 0 10000 0 127"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-7",
-                    "maxclass": "live.toggle",
-                    "numinlets": 1,
-                    "numoutlets": 1,
-                    "outlettype": [ "" ],
-                    "parameter_enable": 1,
-                    "patching_rect": [ 325.0, 53.5, 15.0, 15.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 81.33333575725555, 60.00000178813934, 15.0, 15.0 ],
-                    "saved_attribute_attributes": {
-                        "valueof": {
-                            "parameter_enum": [ "off", "on" ],
-                            "parameter_longname": "live.toggle[3]",
-                            "parameter_mmax": 1,
-                            "parameter_modmode": 0,
-                            "parameter_shortname": "TrackTap",
-                            "parameter_type": 2
-                        }
-                    },
-                    "varname": "live.toggle[2]"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-6",
-                    "maxclass": "live.toggle",
-                    "numinlets": 1,
-                    "numoutlets": 1,
-                    "outlettype": [ "" ],
-                    "parameter_enable": 1,
-                    "patching_rect": [ 325.0, 83.5, 15.0, 15.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 81.33333575725555, 90.00000268220901, 15.0, 15.0 ],
-                    "saved_attribute_attributes": {
-                        "valueof": {
-                            "parameter_enum": [ "off", "on" ],
-                            "parameter_longname": "live.toggle[2]",
-                            "parameter_mmax": 1,
-                            "parameter_modmode": 0,
-                            "parameter_shortname": "RhythmDecay",
-                            "parameter_type": 2
-                        }
-                    },
-                    "varname": "live.toggle[1]"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-4",
-                    "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [ "int" ],
-                    "patching_rect": [ 386.5, 103.0, 37.0, 22.0 ],
-                    "text": "* 127"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-3",
-                    "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [ "int" ],
-                    "patching_rect": [ 356.5, 70.0, 37.0, 22.0 ],
-                    "text": "* 127"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-2",
-                    "maxclass": "newobj",
-                    "numinlets": 2,
-                    "numoutlets": 1,
-                    "outlettype": [ "int" ],
-                    "patching_rect": [ 372.0, 30.0, 37.0, 22.0 ],
-                    "text": "* 127"
-                }
-            },
-            {
-                "box": {
-                    "id": "obj-1",
-                    "maxclass": "live.toggle",
-                    "numinlets": 1,
-                    "numoutlets": 1,
-                    "outlettype": [ "" ],
-                    "parameter_enable": 1,
-                    "patching_rect": [ 322.5, 18.5, 15.0, 15.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 81.33333575725555, 30.00000089406967, 15.0, 15.0 ],
-                    "saved_attribute_attributes": {
-                        "valueof": {
-                            "parameter_enum": [ "off", "on" ],
-                            "parameter_longname": "live.toggle[1]",
-                            "parameter_mmax": 1,
-                            "parameter_modmode": 0,
-                            "parameter_shortname": "Quantize",
-                            "parameter_type": 2
-                        }
-                    },
-                    "varname": "live.toggle"
-                }
-            },
-            {
-                "box": {
-                    "id": "delay",
-                    "maxclass": "live.dial",
-                    "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "float" ],
-                    "parameter_enable": 1,
-                    "patching_rect": [ 20.0, 20.0, 40.0, 48.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 20.0, 20.0, 40.0, 48.0 ],
-                    "saved_attribute_attributes": {
-                        "valueof": {
-                            "parameter_longname": "Delay",
-                            "parameter_modmode": 0,
-                            "parameter_shortname": "Delay",
-                            "parameter_type": 1,
-                            "parameter_unitstyle": 0
-                        }
-                    },
-                    "varname": "live.dial"
-                }
-            },
-            {
-                "box": {
-                    "id": "delay_label",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 84.0, 31.0, 150.0, 20.0 ],
-                    "text": "Delay (CC48)"
-                }
-            },
-            {
-                "box": {
-                    "id": "delay_out",
-                    "maxclass": "newobj",
-                    "numinlets": 3,
-                    "numoutlets": 0,
-                    "patching_rect": [ 200.0, 30.0, 80.0, 22.0 ],
-                    "text": "ctlout 48"
-                }
-            },
-            {
-                "box": {
-                    "id": "fblevel",
-                    "maxclass": "live.dial",
-                    "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "float" ],
-                    "parameter_enable": 1,
-                    "patching_rect": [ 20.0, 70.0, 40.0, 48.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 20.0, 70.0, 40.0, 48.0 ],
-                    "saved_attribute_attributes": {
-                        "valueof": {
-                            "parameter_longname": "Feedback Level",
-                            "parameter_modmode": 0,
-                            "parameter_shortname": "Feedback",
-                            "parameter_type": 1,
-                            "parameter_unitstyle": 0
-                        }
-                    },
-                    "varname": "d_two_FeedbackLevel"
-                }
-            },
-            {
-                "box": {
-                    "id": "fb_label",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 67.0, 81.0, 150.0, 20.0 ],
-                    "text": "Feedback Level (CC50)"
-                }
-            },
-            {
-                "box": {
-                    "id": "fblevel_out",
-                    "maxclass": "newobj",
-                    "numinlets": 3,
-                    "numoutlets": 0,
-                    "patching_rect": [ 200.0, 80.0, 80.0, 22.0 ],
-                    "text": "ctlout 50"
-                }
-            },
-            {
-                "box": {
-                    "fontname": "Seven Segment",
-                    "id": "fbrepeats",
-                    "maxclass": "number",
-                    "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "bang" ],
-                    "parameter_enable": 0,
-                    "patching_rect": [ 20.0, 120.0, 39.0, 21.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 20.0, 120.0, 39.0, 21.0 ]
-                }
-            },
-            {
-                "box": {
-                    "id": "fbr_label",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 76.0, 121.0, 150.0, 20.0 ],
-                    "text": "FB Repeats (CC51)"
-                }
-            },
-            {
-                "box": {
-                    "id": "fbr_out",
-                    "maxclass": "newobj",
-                    "numinlets": 3,
-                    "numoutlets": 0,
-                    "patching_rect": [ 200.0, 120.0, 80.0, 22.0 ],
-                    "text": "ctlout 51"
-                }
-            },
-            {
-                "box": {
-                    "id": "shuffle",
-                    "maxclass": "live.dial",
-                    "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "float" ],
-                    "parameter_enable": 1,
-                    "patching_rect": [ 20.0, 160.0, 40.0, 48.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 19.333333909511566, 170.0000050663948, 40.0, 48.0 ],
-                    "saved_attribute_attributes": {
-                        "valueof": {
-                            "parameter_longname": "live.dial[9]",
-                            "parameter_modmode": 0,
-                            "parameter_shortname": "Shuffle",
-                            "parameter_type": 1,
-                            "parameter_unitstyle": 0
-                        }
-                    },
-                    "varname": "live.dial[2]"
-                }
-            },
-            {
-                "box": {
-                    "id": "shuf_label",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 76.0, 171.0, 150.0, 20.0 ],
-                    "text": "Shuffle (CC52)"
-                }
-            },
-            {
-                "box": {
-                    "id": "shuffle_out",
-                    "maxclass": "newobj",
-                    "numinlets": 3,
-                    "numoutlets": 0,
-                    "patching_rect": [ 200.0, 170.0, 80.0, 22.0 ],
-                    "text": "ctlout 52"
-                }
-            },
-            {
-                "box": {
-                    "id": "quant_label",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 372.0, 16.0, 150.0, 20.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 104.66666978597641, 27.333334147930145, 87.33333593606949, 20.0 ],
-                    "text": "Quantize"
-                }
-            },
-            {
-                "box": {
-                    "id": "quant_out",
-                    "maxclass": "newobj",
-                    "numinlets": 3,
-                    "numoutlets": 0,
-                    "patching_rect": [ 480.0, 20.0, 80.0, 22.0 ],
-                    "text": "ctlout 53"
-                }
-            },
-            {
-                "box": {
-                    "id": "ttap_label",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 372.0, 51.0, 150.0, 20.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 104.66666978597641, 57.33333504199982, 87.33333593606949, 20.0 ],
-                    "text": "Track Tap"
-                }
-            },
-            {
-                "box": {
-                    "id": "ttap_out",
-                    "maxclass": "newobj",
-                    "numinlets": 3,
-                    "numoutlets": 0,
-                    "patching_rect": [ 480.0, 50.0, 80.0, 22.0 ],
-                    "text": "ctlout 54"
-                }
-            },
-            {
-                "box": {
-                    "id": "rhdecay_label",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 372.0, 81.0, 93.0, 20.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 104.66666978597641, 87.33333593606949, 87.33333593606949, 20.0 ],
-                    "text": "Rhythm Decay"
-                }
-            },
-            {
-                "box": {
-                    "id": "rhdecay_out",
-                    "maxclass": "newobj",
-                    "numinlets": 3,
-                    "numoutlets": 0,
-                    "patching_rect": [ 480.0, 80.0, 80.0, 22.0 ],
-                    "text": "ctlout 55"
-                }
-            },
-            {
-                "box": {
-                    "fontname": "Seven Segment",
-                    "id": "subdiv",
-                    "maxclass": "number",
-                    "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "bang" ],
-                    "parameter_enable": 0,
-                    "patching_rect": [ 320.0, 120.0, 39.0, 21.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 81.33333575725555, 120.00000298023224, 39.0, 21.0 ]
-                }
-            },
-            {
-                "box": {
-                    "id": "sub_label",
-                    "maxclass": "comment",
-                    "numinlets": 1,
-                    "numoutlets": 0,
-                    "patching_rect": [ 372.0, 121.0, 150.0, 20.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 81.33333575725555, 143.0, 80.66666907072067, 20.0 ],
-                    "text": "Subdivisions"
-                }
-            },
-            {
-                "box": {
-                    "id": "sub_out",
-                    "maxclass": "newobj",
-                    "numinlets": 3,
-                    "numoutlets": 0,
-                    "patching_rect": [ 480.0, 120.0, 80.0, 22.0 ],
-                    "text": "ctlout 56"
-                }
-            },
-            {
-                "box": {
-                    "id": "fxlevel",
-                    "maxclass": "live.dial",
-                    "numinlets": 1,
-                    "numoutlets": 2,
-                    "outlettype": [ "", "float" ],
-                    "parameter_enable": 1,
-                    "patching_rect": [ 320.0, 160.0, 40.0, 48.0 ],
-                    "presentation": 1,
-                    "presentation_rect": [ 80.83333575725555, 170.0000050663948, 40.0, 48.0 ],
-                    "saved_attribute_attributes": {
-                        "valueof": {
-                            "parameter_longname": "FX Level",
-                            "parameter_modmode": 0,
-                            "parameter_shortname": "FX",
-                            "parameter_type": 1,
-                            "parameter_unitstyle": 0
-                        }
-                    },
-                    "varname": "d_two_FXLevel"
-                }
-            },
-            {
-                "box": {
-                    "id": "fx_out",
-                    "maxclass": "newobj",
-                    "numinlets": 3,
-                    "numoutlets": 0,
-                    "patching_rect": [ 480.0, 170.0, 80.0, 22.0 ],
-                    "text": "ctlout 57"
-                }
-            }
-        ],
-        "lines": [
-            {
-                "patchline": {
-                    "destination": [ "obj-5", 0 ],
-                    "source": [ "delay", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "fblevel_out", 0 ],
-                    "source": [ "fblevel", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "fbr_out", 0 ],
-                    "source": [ "fbrepeats", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "fx_out", 0 ],
-                    "source": [ "fxlevel", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-2", 0 ],
-                    "source": [ "obj-1", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "quant_out", 0 ],
-                    "source": [ "obj-2", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "ttap_out", 0 ],
-                    "source": [ "obj-3", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "rhdecay_out", 0 ],
-                    "source": [ "obj-4", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "delay_out", 0 ],
-                    "source": [ "obj-5", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-4", 0 ],
-                    "source": [ "obj-6", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-3", 0 ],
-                    "source": [ "obj-7", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "shuffle_out", 0 ],
-                    "source": [ "shuffle", 0 ]
-                }
-            }
-        ],
-        "parameters": {
-            "delay": [ "Delay", "Delay", 0 ],
-            "fblevel": [ "Feedback Level", "Feedback", 0 ],
-            "fxlevel": [ "FX Level", "FX", 0 ],
-            "obj-1": [ "live.toggle[1]", "Quantize", 0 ],
-            "obj-6": [ "live.toggle[2]", "RhythmDecay", 0 ],
-            "obj-7": [ "live.toggle[3]", "TrackTap", 0 ],
-            "obj-8": [ "Delay[1]", "Delay", 0 ],
-            "shuffle": [ "live.dial[9]", "Shuffle", 0 ],
-            "inherited_shortname": 1
-        },
-        "autosave": 0
+ "patcher": {
+  "fileversion": 1,
+  "appversion": {
+   "major": 9,
+   "minor": 0,
+   "revision": 0,
+   "architecture": "x64",
+   "modernui": 1
+  },
+  "classnamespace": "box",
+  "rect": [
+   150.0,
+   150.0,
+   1280.0,
+   520.0
+  ],
+  "openrect": [
+   0.0,
+   0.0,
+   700.0,
+   330.0
+  ],
+  "openinpresentation": 1,
+  "default_fontsize": 12.0,
+  "default_fontname": "Arial",
+  "gridsize": [
+   15.0,
+   15.0
+  ],
+  "boxes": [
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "r dtwo_in",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      16,
+      16,
+      70,
+      22
+     ],
+     "id": "obj-1",
+     "numinlets": 0,
+     "numoutlets": 1
     }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "route delay fblevel fbrepeats shuffle quantize tracktap rhythmdecay subdiv fxlevel",
+     "outlettype": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ],
+     "patching_rect": [
+      16,
+      50,
+      990,
+      22
+     ],
+     "id": "obj-2",
+     "numinlets": 1,
+     "numoutlets": 10
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "s dtwo_out",
+     "outlettype": [],
+     "patching_rect": [
+      16,
+      300,
+      75,
+      22
+     ],
+     "id": "obj-3",
+     "numinlets": 1,
+     "numoutlets": 0
+    }
+   },
+   {
+    "box": {
+     "maxclass": "live.dial",
+     "outlettype": [
+      "",
+      "float"
+     ],
+     "parameter_enable": 1,
+     "patching_rect": [
+      16,
+      120,
+      44,
+      48
+     ],
+     "saved_attribute_attributes": {
+      "valueof": {
+       "parameter_mmin": 0,
+       "parameter_mmax": 10000,
+       "parameter_type": 1,
+       "parameter_initial": [
+        0
+       ],
+       "parameter_initial_enable": 0,
+       "parameter_unitstyle": 9,
+       "parameter_units": "ms",
+       "parameter_longname": "Delay Time",
+       "parameter_shortname": "Delay"
+      }
+     },
+     "varname": "Delay Time",
+     "presentation": 1,
+     "presentation_rect": [
+      18,
+      8,
+      44,
+      64
+     ],
+     "id": "obj-4",
+     "numinlets": 1,
+     "numoutlets": 2
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend set",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      16,
+      85,
+      75,
+      22
+     ],
+     "id": "obj-5",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend delay",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      16,
+      260,
+      100,
+      22
+     ],
+     "id": "obj-6",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "live.dial",
+     "outlettype": [
+      "",
+      "float"
+     ],
+     "parameter_enable": 1,
+     "patching_rect": [
+      126,
+      120,
+      44,
+      48
+     ],
+     "saved_attribute_attributes": {
+      "valueof": {
+       "parameter_mmin": 0,
+       "parameter_mmax": 100,
+       "parameter_type": 1,
+       "parameter_initial": [
+        0
+       ],
+       "parameter_initial_enable": 0,
+       "parameter_unitstyle": 9,
+       "parameter_units": "%",
+       "parameter_longname": "Feedback Level",
+       "parameter_shortname": "Feedback"
+      }
+     },
+     "varname": "Feedback Level",
+     "presentation": 1,
+     "presentation_rect": [
+      88,
+      8,
+      44,
+      64
+     ],
+     "id": "obj-7",
+     "numinlets": 1,
+     "numoutlets": 2
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend set",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      126,
+      85,
+      75,
+      22
+     ],
+     "id": "obj-8",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend fblevel",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      126,
+      260,
+      100,
+      22
+     ],
+     "id": "obj-9",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "live.menu",
+     "outlettype": [
+      "",
+      "",
+      "float"
+     ],
+     "parameter_enable": 1,
+     "patching_rect": [
+      236,
+      120,
+      44,
+      48
+     ],
+     "saved_attribute_attributes": {
+      "valueof": {
+       "parameter_enum": [
+        "-",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+       ],
+       "parameter_mmax": 10,
+       "parameter_type": 2,
+       "parameter_longname": "Feedback Repeats",
+       "parameter_shortname": "Repeats"
+      }
+     },
+     "varname": "Feedback Repeats",
+     "presentation": 1,
+     "presentation_rect": [
+      8,
+      114,
+      94,
+      18
+     ],
+     "id": "obj-10",
+     "numinlets": 1,
+     "numoutlets": 3
+    }
+   },
+   {
+    "box": {
+     "maxclass": "comment",
+     "text": "Repeats",
+     "patching_rect": [
+      236,
+      170,
+      90,
+      20
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      8,
+      94,
+      110,
+      20
+     ],
+     "id": "obj-11",
+     "numinlets": 1,
+     "numoutlets": 0
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend set",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      236,
+      85,
+      75,
+      22
+     ],
+     "id": "obj-12",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend fbrepeats",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      236,
+      260,
+      100,
+      22
+     ],
+     "id": "obj-13",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "live.dial",
+     "outlettype": [
+      "",
+      "float"
+     ],
+     "parameter_enable": 1,
+     "patching_rect": [
+      346,
+      120,
+      44,
+      48
+     ],
+     "saved_attribute_attributes": {
+      "valueof": {
+       "parameter_mmin": 0,
+       "parameter_mmax": 100,
+       "parameter_type": 1,
+       "parameter_initial": [
+        0
+       ],
+       "parameter_initial_enable": 0,
+       "parameter_unitstyle": 9,
+       "parameter_units": "%",
+       "parameter_longname": "Shuffle",
+       "parameter_shortname": "Shuffle"
+      }
+     },
+     "varname": "Shuffle",
+     "presentation": 1,
+     "presentation_rect": [
+      158,
+      8,
+      44,
+      64
+     ],
+     "id": "obj-14",
+     "numinlets": 1,
+     "numoutlets": 2
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend set",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      346,
+      85,
+      75,
+      22
+     ],
+     "id": "obj-15",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend shuffle",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      346,
+      260,
+      100,
+      22
+     ],
+     "id": "obj-16",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "live.toggle",
+     "outlettype": [
+      ""
+     ],
+     "parameter_enable": 1,
+     "patching_rect": [
+      456,
+      120,
+      44,
+      48
+     ],
+     "saved_attribute_attributes": {
+      "valueof": {
+       "parameter_enum": [
+        "off",
+        "on"
+       ],
+       "parameter_mmax": 1,
+       "parameter_type": 2,
+       "parameter_longname": "Quantize",
+       "parameter_shortname": "Quantize"
+      }
+     },
+     "varname": "Quantize",
+     "presentation": 1,
+     "presentation_rect": [
+      8,
+      158,
+      15,
+      15
+     ],
+     "id": "obj-17",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "comment",
+     "text": "Quantize",
+     "patching_rect": [
+      456,
+      170,
+      90,
+      20
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      26,
+      154,
+      90,
+      20
+     ],
+     "id": "obj-18",
+     "numinlets": 1,
+     "numoutlets": 0
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend set",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      456,
+      85,
+      75,
+      22
+     ],
+     "id": "obj-19",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend quantize",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      456,
+      260,
+      100,
+      22
+     ],
+     "id": "obj-20",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "live.toggle",
+     "outlettype": [
+      ""
+     ],
+     "parameter_enable": 1,
+     "patching_rect": [
+      566,
+      120,
+      44,
+      48
+     ],
+     "saved_attribute_attributes": {
+      "valueof": {
+       "parameter_enum": [
+        "off",
+        "on"
+       ],
+       "parameter_mmax": 1,
+       "parameter_type": 2,
+       "parameter_longname": "Track Tap",
+       "parameter_shortname": "Track Tap"
+      }
+     },
+     "varname": "Track Tap",
+     "presentation": 1,
+     "presentation_rect": [
+      124,
+      158,
+      15,
+      15
+     ],
+     "id": "obj-21",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "comment",
+     "text": "Track Tap",
+     "patching_rect": [
+      566,
+      170,
+      90,
+      20
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      142,
+      154,
+      90,
+      20
+     ],
+     "id": "obj-22",
+     "numinlets": 1,
+     "numoutlets": 0
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend set",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      566,
+      85,
+      75,
+      22
+     ],
+     "id": "obj-23",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend tracktap",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      566,
+      260,
+      100,
+      22
+     ],
+     "id": "obj-24",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "live.tab",
+     "outlettype": [
+      "",
+      "",
+      "float"
+     ],
+     "parameter_enable": 1,
+     "patching_rect": [
+      676,
+      120,
+      44,
+      48
+     ],
+     "saved_attribute_attributes": {
+      "valueof": {
+       "parameter_enum": [
+        "Normal",
+        "Step"
+       ],
+       "parameter_mmax": 1,
+       "parameter_type": 2,
+       "parameter_unitstyle": 9,
+       "parameter_longname": "Rhythm Decay",
+       "parameter_shortname": "Rhy Decay"
+      }
+     },
+     "varname": "Rhythm Decay",
+     "presentation": 1,
+     "presentation_rect": [
+      124,
+      114,
+      102,
+      20
+     ],
+     "id": "obj-25",
+     "numinlets": 1,
+     "numoutlets": 3
+    }
+   },
+   {
+    "box": {
+     "maxclass": "comment",
+     "text": "Rhy Decay",
+     "patching_rect": [
+      676,
+      170,
+      90,
+      20
+     ],
+     "presentation": 1,
+     "presentation_rect": [
+      124,
+      94,
+      110,
+      20
+     ],
+     "id": "obj-26",
+     "numinlets": 1,
+     "numoutlets": 0
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend set",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      676,
+      85,
+      75,
+      22
+     ],
+     "id": "obj-27",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend rhythmdecay",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      676,
+      260,
+      100,
+      22
+     ],
+     "id": "obj-28",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "live.dial",
+     "outlettype": [
+      "",
+      "float"
+     ],
+     "parameter_enable": 1,
+     "patching_rect": [
+      786,
+      120,
+      44,
+      48
+     ],
+     "saved_attribute_attributes": {
+      "valueof": {
+       "parameter_mmin": 0,
+       "parameter_mmax": 12,
+       "parameter_type": 1,
+       "parameter_initial": [
+        0
+       ],
+       "parameter_initial_enable": 0,
+       "parameter_unitstyle": 0,
+       "parameter_longname": "Subdivision",
+       "parameter_shortname": "Subdiv"
+      }
+     },
+     "varname": "Subdivision",
+     "presentation": 1,
+     "presentation_rect": [
+      228,
+      8,
+      44,
+      64
+     ],
+     "id": "obj-29",
+     "numinlets": 1,
+     "numoutlets": 2
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend set",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      786,
+      85,
+      75,
+      22
+     ],
+     "id": "obj-30",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend subdiv",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      786,
+      260,
+      100,
+      22
+     ],
+     "id": "obj-31",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "live.dial",
+     "outlettype": [
+      "",
+      "float"
+     ],
+     "parameter_enable": 1,
+     "patching_rect": [
+      896,
+      120,
+      44,
+      48
+     ],
+     "saved_attribute_attributes": {
+      "valueof": {
+       "parameter_mmin": 0,
+       "parameter_mmax": 100,
+       "parameter_type": 1,
+       "parameter_initial": [
+        0
+       ],
+       "parameter_initial_enable": 0,
+       "parameter_unitstyle": 9,
+       "parameter_units": "%",
+       "parameter_longname": "FX Level",
+       "parameter_shortname": "FX Level"
+      }
+     },
+     "varname": "FX Level",
+     "presentation": 1,
+     "presentation_rect": [
+      298,
+      8,
+      44,
+      64
+     ],
+     "id": "obj-32",
+     "numinlets": 1,
+     "numoutlets": 2
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend set",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      896,
+      85,
+      75,
+      22
+     ],
+     "id": "obj-33",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   },
+   {
+    "box": {
+     "maxclass": "newobj",
+     "text": "prepend fxlevel",
+     "outlettype": [
+      ""
+     ],
+     "patching_rect": [
+      896,
+      260,
+      100,
+      22
+     ],
+     "id": "obj-34",
+     "numinlets": 1,
+     "numoutlets": 1
+    }
+   }
+  ],
+  "lines": [
+   {
+    "patchline": {
+     "source": [
+      "obj-1",
+      0
+     ],
+     "destination": [
+      "obj-2",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-2",
+      0
+     ],
+     "destination": [
+      "obj-5",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-5",
+      0
+     ],
+     "destination": [
+      "obj-4",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-4",
+      0
+     ],
+     "destination": [
+      "obj-6",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-6",
+      0
+     ],
+     "destination": [
+      "obj-3",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-2",
+      1
+     ],
+     "destination": [
+      "obj-8",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-8",
+      0
+     ],
+     "destination": [
+      "obj-7",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-7",
+      0
+     ],
+     "destination": [
+      "obj-9",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-9",
+      0
+     ],
+     "destination": [
+      "obj-3",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-2",
+      2
+     ],
+     "destination": [
+      "obj-12",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-12",
+      0
+     ],
+     "destination": [
+      "obj-10",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-10",
+      0
+     ],
+     "destination": [
+      "obj-13",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-13",
+      0
+     ],
+     "destination": [
+      "obj-3",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-2",
+      3
+     ],
+     "destination": [
+      "obj-15",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-15",
+      0
+     ],
+     "destination": [
+      "obj-14",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-14",
+      0
+     ],
+     "destination": [
+      "obj-16",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-16",
+      0
+     ],
+     "destination": [
+      "obj-3",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-2",
+      4
+     ],
+     "destination": [
+      "obj-19",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-19",
+      0
+     ],
+     "destination": [
+      "obj-17",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-17",
+      0
+     ],
+     "destination": [
+      "obj-20",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-20",
+      0
+     ],
+     "destination": [
+      "obj-3",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-2",
+      5
+     ],
+     "destination": [
+      "obj-23",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-23",
+      0
+     ],
+     "destination": [
+      "obj-21",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-21",
+      0
+     ],
+     "destination": [
+      "obj-24",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-24",
+      0
+     ],
+     "destination": [
+      "obj-3",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-2",
+      6
+     ],
+     "destination": [
+      "obj-27",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-27",
+      0
+     ],
+     "destination": [
+      "obj-25",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-25",
+      0
+     ],
+     "destination": [
+      "obj-28",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-28",
+      0
+     ],
+     "destination": [
+      "obj-3",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-2",
+      7
+     ],
+     "destination": [
+      "obj-30",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-30",
+      0
+     ],
+     "destination": [
+      "obj-29",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-29",
+      0
+     ],
+     "destination": [
+      "obj-31",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-31",
+      0
+     ],
+     "destination": [
+      "obj-3",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-2",
+      8
+     ],
+     "destination": [
+      "obj-33",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-33",
+      0
+     ],
+     "destination": [
+      "obj-32",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-32",
+      0
+     ],
+     "destination": [
+      "obj-34",
+      0
+     ]
+    }
+   },
+   {
+    "patchline": {
+     "source": [
+      "obj-34",
+      0
+     ],
+     "destination": [
+      "obj-3",
+      0
+     ]
+    }
+   }
+  ],
+  "dependency_cache": [],
+  "autosave": 0
+ }
 }
