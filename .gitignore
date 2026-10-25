@@ -1,0 +1,7 @@
+.DS_Store
+__pycache__/
+*.mov
+# Vendor docs and third-party font: kept locally, not redistributed.
+*.pdf
+*.ttf
+seven_segment.zip
